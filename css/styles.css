@@ -1,0 +1,92 @@
+body {
+    margin: 0; /*minden margin alapértékét 0-ra állítjuk a 8-ról, a body-n belül*/
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;  /* "web safe fonts" -- 
+    fallbacks -> if font is not supported, it will go into Arial in this case*/
+}
+
+h1 {
+    font-size: 5.625rem; /*px is not dynamic size, a 100% is equals to 16px -> 
+    90px/16 = 5,625 -> 562.5%  --- 1em = 16px = 100% */
+    /*font sizes are inherited, and add up the parent/child values, kivétel ha statikus*/
+    /*rem -> root em -> will ignore all the other values, will only keep that one*/
+    margin: 50px auto 0 auto; 
+    /*ha nem lenne width beállítva, akkor középen lenne a 
+    text-align body miatt. azonban mivel a doboz alapból kicsi, magánban a dobozban egyébként
+    is középen lenne - így a h1-es szülő divhez igazítva, állitjuk be a h1 tag marginjait*/
+    font-family: 'Square Peg', cursive;
+    color: #66BFBF;
+    line-height: 2;
+}
+
+h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #66BFBF;
+}
+
+h3{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #11999E;
+}
+
+a{
+    color: #11999E;
+}
+
+.top-container {
+    background-color: blanchedalmond;
+    position: relative;
+    padding-top: 100px;
+}
+
+.middle-container {
+
+}
+
+.bottom-container {
+
+}
+
+.pro {
+    text-decoration: underline;
+}
+
+.top-cloud{
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+
+.bottom-cloud{
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+
+.skill-row{
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+}
+
+.skill-desc{
+    line-height: 2.5;
+}
+
+.skill-image-reading{
+    width: 25%;
+    float: left;
+    padding-right: 30px;
+}
+
+.skill-image-coding{
+    width: 25%;
+    float: right;
+    padding-left: 30px;
+}
+
+/*clear --> "antifloat" clear: left; left margin is there, and cant be floated*/
+/*float is commonly used, and most of the times abused --> only need to be used for wrapping
+not for positioning*/
